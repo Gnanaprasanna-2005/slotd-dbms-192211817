@@ -1,0 +1,30 @@
+mysql> use regno;
+Database changed
+mysql> create table regno(name varchar(3),reg int(2),gender char(1),mobileno int(7));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc regno;
++----------+------------+------+-----+---------+-------+
+| Field    | Type       | Null | Key | Default | Extra |
++----------+------------+------+-----+---------+-------+
+| name     | varchar(3) | YES  |     | NULL    |       |
+| reg      | int(2)     | YES  |     | NULL    |       |
+| gender   | char(1)    | YES  |     | NULL    |       |
+| mobileno | int(7)     | YES  |     | NULL    |       |
++----------+------------+------+-----+---------+-------+
+4 rows in set (0.05 sec)
+mysql> insert into regno value('sai',81,'f',3456890);
+Query OK, 1 row affected (0.03 sec)
+
+mysql>
+mysql> insert into regno value('sri',82,'m',0987654);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select *from regno;
++------+------+--------+----------+
+| name | reg  | gender | mobileno |
++------+------+--------+----------+
+| sai  |   81 | f      |  3456890 |
+| sri  |   82 | m      |   987654 |
++------+------+--------+----------+
+2 rows in set (0.02 sec)
